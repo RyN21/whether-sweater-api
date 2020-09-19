@@ -5,10 +5,12 @@ describe "Forcast API per location" do
     headers = { "CONTENT_TYPE" => "application/json" }
     placename = 'Denver, CO'
 
-    get "/api/v1/forcast?location=#{placename}"
-    result = JSON.parse(response.body, symbolize_names: true)
-
+    get "/api/v1/forecast?location=#{placename}"
     expect(response).to be_successful
+
+    forecast = JSON.parse(response.body, symbolize_names: true)
+
     require "pry"; binding.pry
+
   end
 end
