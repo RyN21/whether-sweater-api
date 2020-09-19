@@ -6,7 +6,6 @@ describe 'Open Weather Service' do
     lon    = -104.984853
     result = OpenWeatherService.new.onecall(lat, lon)
 
-    expect(result[:current][:temp]).to eq(66.33)
-
+    expect(result[:timezone]).to eq("America/Denver")
   end
 end
