@@ -9,7 +9,7 @@ describe "Forcast API per location" do
     expect(response).to be_successful
 
     forecast = JSON.parse(response.body, symbolize_names: true)
-
+require "pry"; binding.pry
 
   end
 end
