@@ -35,7 +35,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry'
   gem 'factory_bot_rails'
-  gem 'webmock'
   gem 'vcr'
 end
 
@@ -44,6 +43,7 @@ group :development do
 end
 
 group :test do
+  gem 'webmock'
   gem 'simplecov'
   gem 'shoulda-matchers'
 end
