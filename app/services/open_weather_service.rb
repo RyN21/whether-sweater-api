@@ -1,5 +1,11 @@
 class OpenWeatherService
-  def onecall(lat, lon)
+  def onecall(location)
+    search_coords = MapQuestService.new
+    result = search_coords.lat_and_lon(location)
+
+    lat = result[:lat]
+    lon = result[:lon]
+
     response = conn.get("/data/2.5/onecall?lat=#{lat}&lon=#{lon}&exclude=minutely&units=imperial")
     json     = JSON.parse(response.body, symbolize_names: true)
   end
