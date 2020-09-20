@@ -217,6 +217,7 @@
           1,
           null,
           1,
+          1,
           null,
           null,
           null
@@ -298,9 +299,36 @@
           null
         ]
       },
+      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/spec/services/unsplash_service_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/controllers/api/v1/backgrounds_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          0,
+          null,
           null
         ]
       },
@@ -427,8 +455,25 @@
           null,
           null
         ]
+      },
+      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/services/unsplash_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1600587309
+    "timestamp": 1600589593
   }
 }

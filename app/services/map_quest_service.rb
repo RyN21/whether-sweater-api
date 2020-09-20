@@ -1,8 +1,8 @@
 class MapQuestService
   def lat_and_lon(location)
-    lat_lon = {}
+    lat_lon  = {}
     response = conn.get("/geocoding/v1/address?location=#{location}")
-    json = JSON.parse(response.body, symbolize_names: true)
+    json     = JSON.parse(response.body, symbolize_names: true)
 
     lat_lon[:lat] = json[:results][0][:locations][0][:latLng][:lat]
     lat_lon[:lon] = json[:results][0][:locations][0][:latLng][:lng]
