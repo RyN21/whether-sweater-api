@@ -222,6 +222,45 @@
           null
         ]
       },
+      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/spec/requests/api/v1/forcast_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/spec/services/mapquest_service_spec.rb": {
         "lines": [
           1,
@@ -390,6 +429,6 @@
         ]
       }
     },
-    "timestamp": 1600581934
+    "timestamp": 1600587309
   }
 }

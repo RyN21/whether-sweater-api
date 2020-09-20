@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "Forcast request" do
   it "sends forcast with attributes" do
-    headers = { "CONTENT_TYPE" => "application/json" }
+    headers  = { "CONTENT_TYPE" => "application/json" }
     location = 'Denver, CO'
 
     get "/api/v1/forecast?location=#{location}"

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-09-20T00:05:34-06:00">2020-09-20T00:05:34-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-09-20T01:35:09-06:00">2020-09-20T01:35:09-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.29
+         1.23
        </span>
     </span> hits/line
     )
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>21</b> files in total.
+    <b>22</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>113</b> relevant lines,
-    <span class="green"><b>113</b> lines covered</span> and
+    <b>141</b> relevant lines,
+    <span class="green"><b>141</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -274,6 +274,17 @@
             <td class="cell--number">10</td>
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#15f7537f3d358f9a32e0eaee69f6ebbf6f212998" class="src_link" title="spec/requests/api/v1/forcast_request_spec.rb">spec/requests/api/v1/forcast_request_spec.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">35</td>
+            <td class="cell--number">28</td>
+            <td class="cell--number">28</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -1232,7 +1243,7 @@
 
             
 
-            <code class="ruby">  def lat_and_lon(placename)</code>
+            <code class="ruby">  def lat_and_lon(location)</code>
           </li>
         </div>
       
@@ -1254,7 +1265,7 @@
 
             
 
-            <code class="ruby">    response = conn.get(&quot;/geocoding/v1/address?location=#{placename}&quot;)</code>
+            <code class="ruby">    response = conn.get(&quot;/geocoding/v1/address?location=#{location}&quot;)</code>
           </li>
         </div>
       
@@ -3932,6 +3943,422 @@
 </div>
 
       
+        <div class="source_table" id="15f7537f3d358f9a32e0eaee69f6ebbf6f212998">
+  <div class="header">
+    <h3>spec/requests/api/v1/forcast_request_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>28</b> relevant lines.
+      <span class="green"><b>28</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &#39;rails_helper&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">describe &quot;Forcast request&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &quot;sends forcast with attributes&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    headers  = { &quot;CONTENT_TYPE&quot; =&gt; &quot;application/json&quot; }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    location = &#39;Denver, CO&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    get &quot;/api/v1/forecast?location=#{location}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(response).to be_successful</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    forecast = JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:id]).to be_nil</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:type]).to eq(&#39;forecast&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:current_temp]).to    be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:weather_summary]).to be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:weather_main]).to    be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:high]).to            be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:low]).to             be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:feels_like]).to      be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:humidity]).to        be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:visibility]).to      be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:uv_index]).to        be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:sunrise]).to         be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:sunset]).to          be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:hourly_48]).to       be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:daily_8]).to         be_truthy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="28">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:hourly_48].length).to eq(48)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:daily_8].length).to   eq(8)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="31">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:minutely]).to        be_falsy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:pressure]).to        be_falsy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="33">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(forecast[:data][:attributes][:dew_point]).to       be_falsy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="a97051a83f27c712f57b63a8a6cf502429fa0694">
   <div class="header">
     <h3>spec/services/mapquest_service_spec.rb</h3>
@@ -4009,7 +4436,7 @@
 
             
 
-            <code class="ruby">    placename = &quot;Denver, CO&quot;</code>
+            <code class="ruby">    location  = &quot;Denver, CO&quot;</code>
           </li>
         </div>
       
@@ -4053,7 +4480,7 @@
 
             
 
-            <code class="ruby">    expect(MapQuestService.new.lat_and_lon(placename)).to eq(result)</code>
+            <code class="ruby">    expect(MapQuestService.new.lat_and_lon(location)).to eq(result)</code>
           </li>
         </div>
       
@@ -4097,7 +4524,7 @@
 
             
 
-            <code class="ruby">    placename = &quot;Denver,CO&quot;</code>
+            <code class="ruby">    location  = &quot;Denver,CO&quot;</code>
           </li>
         </div>
       
@@ -4141,7 +4568,7 @@
 
             
 
-            <code class="ruby">    expect(MapQuestService.new.lat_and_lon(placename)).to eq(result)</code>
+            <code class="ruby">    expect(MapQuestService.new.lat_and_lon(location)).to eq(result)</code>
           </li>
         </div>
       
