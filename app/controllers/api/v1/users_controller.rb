@@ -7,13 +7,13 @@ class Api::V1::UsersController < ApplicationController
       render json: UserSerializer.new(user)
       response.status = 201
     elsif params[:password] == nil || params[:password_confirmation] == nil || params[:email] == nil
-      render json: "Missing a field. Please try again."
+      render json: "Unsuccessful. Missing a field. Please try again."
       response.status = 409
     elsif params[:password] != params[:password_confirmation]
-      render json: "Passwords do not match. Please try again."
+      render json: "Unsuccessful. Passwords do not match. Please try again."
       response.status = 409
     else
-      render json: "Email already taken."
+      render json: "Unsuccessful. Email already taken."
       response.status = 409
     end
   end

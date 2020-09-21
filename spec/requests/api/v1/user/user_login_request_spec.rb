@@ -41,7 +41,7 @@ describe "Unsuccessful Requests" do
 
       expect(response).to_not be_successful
       expect(response.status).to eq(401)
-      expect(response.body).to eq("User not found. Check if you entered the correct email or Sign up")
+      expect(response.body).to eq("Unsuccessful. User not found. Check if you entered the correct email or Sign up")
     end
 
     it "tests for unsuccessful requests: Incorrect password" do
@@ -54,6 +54,6 @@ describe "Unsuccessful Requests" do
 
         expect(response).to_not be_successful
         expect(response.status).to eq(401)
-        expect(response.body).to eq("Password does not match. Please try again.")
+        expect(response.body).to eq("Unsuccessful. Password does not match. Please try again.")
       end
 end

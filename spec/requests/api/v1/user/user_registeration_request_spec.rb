@@ -42,7 +42,7 @@ describe "Unsuccessful Requests" do
 
     expect(response).to_not be_successful
     expect(response.status).to eq(409)
-    expect(response.body).to eq("Passwords do not match. Please try again.")
+    expect(response.body).to eq("Unsuccessful. Passwords do not match. Please try again.")
   end
 
   it "tests for unsuccessful requests: Email already taken" do
@@ -56,7 +56,7 @@ describe "Unsuccessful Requests" do
 
     expect(response).to_not be_successful
     expect(response.status).to eq(409)
-    expect(response.body).to eq("Email already taken.")
+    expect(response.body).to eq("Unsuccessful. Email already taken.")
   end
 
   it "tests for unsuccessful requests: Missing fields" do
@@ -68,6 +68,6 @@ describe "Unsuccessful Requests" do
 
     expect(response).to_not be_successful
     expect(response.status).to eq(409)
-    expect(response.body).to eq("Missing a field. Please try again.")
+    expect(response.body).to eq("Unsuccessful. Missing a field. Please try again.")
   end
 end
