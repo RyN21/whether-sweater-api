@@ -4,9 +4,10 @@ class Route
               :rating,
               :location,
               :lat,
-              :lon
+              :lon,
+              :distance
 
-  def initialize(data, distance, weather)
+  def initialize(data, distance)
     @name     = data[:name]
     @type     = data[:type]
     @rating   = data[:rating]
@@ -14,7 +15,5 @@ class Route
     @lat      = data[:latitude]
     @lon      = data[:longitude]
     @distance = distance
-    @weather  = weather[:weather][0][:description]
-    @temp     = weather[:main][:temp]
   end
 end

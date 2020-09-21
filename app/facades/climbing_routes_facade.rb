@@ -8,10 +8,7 @@ class ClimbingRoutesFacade
       lon    = route_data[:longitude]
       distance_to_route = search.distance_to_destination(location, lat, lon)
 
-      search  = OpenWeatherService.new
-      weather = search.current_weather(lat, lon)
-      
-      Route.new(route_data, distance_to_route, weather)
+      Route.new(route_data, distance_to_route)
     end
   end
 
