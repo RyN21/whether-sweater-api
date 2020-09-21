@@ -4,13 +4,14 @@ class ClimbingRoutesFacade
     routes = search.find_routes_by_lat_and_lon(location)
     routes[:routes].map do |route_data|
       search = MapQuestService.new
-      lat = route_data[:latitude]
-      lon = route_data[:longitude]
+      lat    = route_data[:latitude]
+      lon    = route_data[:longitude]
       distance_to_route = search.distance_to_destination(location, lat, lon)
 
-      search = OpenWeatherService.new
+      search  = OpenWeatherService.new
+      weather = search.current_weather(lat, lon)
       
-      Route.new(route_data, distance_to_route)
+      Route.new(route_data, distance_to_route, weather)
     end
   end
 

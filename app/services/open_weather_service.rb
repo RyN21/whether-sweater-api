@@ -10,6 +10,11 @@ class OpenWeatherService
     json     = JSON.parse(response.body, symbolize_names: true)
   end
 
+  def current_weather(lat, lon)
+    response = conn.get("/data/2.5/weather?lat=#{lat}&lon=#{lon}&units=imperial")
+    json     = JSON.parse(response.body, symbolize_names: true)
+  end
+
   private
   def conn
     Faraday.new(url: 'https://api.openweathermap.org') do |faraday|
