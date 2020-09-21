@@ -9,6 +9,7 @@ describe 'Background request' do
     expect(response).to be_successful
 
     image = JSON.parse(response.body, symbolize_names: true)
+    require "pry"; binding.pry
 
     expect(forecast[:data][:type]).to eq('image')
     expect(forecast[:data][:id]).to                      be_nil

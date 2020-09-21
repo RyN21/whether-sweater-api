@@ -14,20 +14,20 @@ class Forecast
               :hourly_48,
               :daily_8
 
-  def initialize(data)
+  def initialize(forecast_data)
     @id              = nil
-    @current_temp    = data[:current][:temp]
-    @weather_summary = data[:current][:weather][0][:description]
-    @weather_main    = data[:current][:weather][0][:main]
-    @high            = data[:daily][0][:temp][:max]
-    @low             = data[:daily][0][:temp][:min]
-    @feels_like      = data[:current][:feels_like]
-    @humidity        = data[:current][:humidity]
-    @visibility      = data[:current][:visibility]
-    @uv_index        = data[:current][:uvi]
-    @sunrise         = data[:current][:sunrise]
-    @sunset          = data[:current][:sunset]
-    @hourly_48       = data[:hourly]
-    @daily_8         = data[:daily]
+    @current_temp    = forecast_data[:current][:temp]
+    @weather_summary = forecast_data[:current][:weather][0][:description]
+    @weather_main    = forecast_data[:current][:weather][0][:main]
+    @high            = forecast_data[:daily][0][:temp][:max]
+    @low             = forecast_data[:daily][0][:temp][:min]
+    @feels_like      = forecast_data[:current][:feels_like]
+    @humidity        = forecast_data[:current][:humidity]
+    @visibility      = forecast_data[:current][:visibility]
+    @uv_index        = forecast_data[:current][:uvi]
+    @sunrise         = forecast_data[:current][:sunrise]
+    @sunset          = forecast_data[:current][:sunset]
+    @hourly_48       = forecast_data[:hourly]
+    @daily_8         = forecast_data[:daily]
   end
 end

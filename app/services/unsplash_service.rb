@@ -1,6 +1,6 @@
 class UnsplashService
-  def background(location)
-    response = conn.get("/search/photos?query=#{location}&page=1&per_page=3")
+  def image_by_current_location(location)
+    response = conn.get("/search/photos?query=#{location} outdoors&page=1&per_page=1&orientation=landscape&filter=high")
     json     = JSON.parse(response.body, symbolize_names: true)
   end
 
