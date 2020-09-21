@@ -6,12 +6,13 @@ class Route
               :lat,
               :lon
 
-  def initialize(data)
+  def initialize(data, distance)
     @name     = data[:name]
     @type     = data[:type]
     @rating   = data[:rating]
     @location = data[:location]
     @lat      = data[:latitude]
     @lon      = data[:longitude]
+    @distance = distance
   end
 end

@@ -6,7 +6,7 @@ class MountainProjectService
     lat = result[:lat]
     lon = result[:lon]
 
-    response = conn.get("/data/get-routes-for-lat-lon?lat=#{lat}&lon=#{lon}")
+    response = conn.get("/data/get-routes-for-lat-lon?lat=#{lat}&lon=#{lon}&maxResults=15")
     json = JSON.parse(response.body, symbolize_names: true)
   end
 

@@ -9,8 +9,17 @@ class MapQuestService
     lat_lon
   end
 
-  def distance_to_destination(location, destination)
-    
+  def reverse_geocode(lat, lon)
+    response = conn.get("http://www.mapquestapi.com/geocoding/v1/reverse?location=#{lat},#{lon}")
+    json     = JSON.parse(response.body, symbolize_names: true)
+    street   = json[:results][0][:locations][0][:street]
+  end
+
+  def distance_to_destination(from, to_lat, to_lon)
+    street   = reverse_geocode(to_lat, to_lon)
+    response = conn.get("http://www.mapquestapi.com/directions/v2/route?from=#{from}&to=#{street}")
+    json     = JSON.parse(response.body, symbolize_names: true)
+    distance = json[:route][:distance]
   end
 
   private
