@@ -36,7 +36,7 @@ describe "Unsuccessful Requests" do
     headers  = { "CONTENT_TYPE" => "application/json" }
     user_params = {email: "test@email.com",
                    password: "password",
-                   password_confirmation: "passwod"}
+                   password_confirmation: "passwordDoesntMatch"}
 
     post "/api/v1/users", params: JSON.generate(user_params), headers: headers
 
@@ -62,6 +62,7 @@ describe "Unsuccessful Requests" do
   it "tests for unsuccessful requests: Missing fields" do
     headers  = { "CONTENT_TYPE" => "application/json" }
     user_params = {email: "test@email.com",
+                   password: "",
                    password_confirmation: "password"}
 
     post "/api/v1/users", params: JSON.generate(user_params), headers: headers

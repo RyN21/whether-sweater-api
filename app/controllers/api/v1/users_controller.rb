@@ -6,7 +6,7 @@ class Api::V1::UsersController < ApplicationController
     if user.save
       render json: UserSerializer.new(user)
       response.status = 201
-    elsif params[:password] == nil || params[:password_confirmation] == nil || params[:email] == nil
+    elsif params[:password] == "" || params[:password_confirmation] == "" || params[:email] == ""
       render json: "Unsuccessful. Missing a field. Please try again."
       response.status = 409
     elsif params[:password] != params[:password_confirmation]
