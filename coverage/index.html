@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-09-20T21:07:28-06:00">2020-09-20T21:07:28-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-09-20T21:23:54-06:00">2020-09-20T21:23:54-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>177</b> relevant lines,
-    <span class="green"><b>177</b> lines covered</span> and
+    <b>178</b> relevant lines,
+    <span class="green"><b>178</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -128,9 +128,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#9a6a142e0d92ca52ff0ccdf1d20e87b7d7239fdc" class="src_link" title="app/poros/background.rb">app/poros/background.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">27</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
+            <td class="cell--number">29</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -450,7 +450,7 @@
 
             
 
-            <code class="ruby">    background = BackgroundsFacade.new.background_object(params[:location])</code>
+            <code class="ruby">    background = BackgroundsFacade.new.background_object(params[:location], params[:weather])</code>
           </li>
         </div>
       
@@ -686,7 +686,7 @@
 
             
 
-            <code class="ruby">  def background_object(location)</code>
+            <code class="ruby">  def background_object(location, weather)</code>
           </li>
         </div>
       
@@ -708,7 +708,7 @@
 
             
 
-            <code class="ruby">    image_data = search.image_by_current_location(location)</code>
+            <code class="ruby">    image_data = search.image_by_current_location(location, weather)</code>
           </li>
         </div>
       
@@ -730,7 +730,7 @@
 
             
 
-            <code class="ruby">    Background.new(image_data, location)</code>
+            <code class="ruby">    Background.new(image_data, location, weather)</code>
           </li>
         </div>
       
@@ -883,8 +883,8 @@
     
 
     <div class="t-line-summary">
-      <b>8</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -924,7 +924,7 @@
 
             
 
-            <code class="ruby">              :image_url,</code>
+            <code class="ruby">              :weather,</code>
           </li>
         </div>
       
@@ -935,7 +935,7 @@
 
             
 
-            <code class="ruby">              :source,</code>
+            <code class="ruby">              :image_url,</code>
           </li>
         </div>
       
@@ -946,7 +946,7 @@
 
             
 
-            <code class="ruby">              :author,</code>
+            <code class="ruby">              :source,</code>
           </li>
         </div>
       
@@ -957,7 +957,7 @@
 
             
 
-            <code class="ruby">              :logo</code>
+            <code class="ruby">              :author,</code>
           </li>
         </div>
       
@@ -968,18 +968,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">              :logo</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="8">
+            
             
 
             
 
-            <code class="ruby">  def initialize(background_data, location)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -990,7 +990,7 @@
 
             
 
-            <code class="ruby">    @location  = location</code>
+            <code class="ruby">  def initialize(background_data, location, weather = &quot;sunny&quot;)</code>
           </li>
         </div>
       
@@ -1001,7 +1001,7 @@
 
             
 
-            <code class="ruby">    @image_url = background_data[:results][0][:urls][:raw]</code>
+            <code class="ruby">    @location  = location</code>
           </li>
         </div>
       
@@ -1012,7 +1012,7 @@
 
             
 
-            <code class="ruby">    @source    = &#39;unsplash.com&#39;</code>
+            <code class="ruby">    @weather   = weather</code>
           </li>
         </div>
       
@@ -1023,7 +1023,7 @@
 
             
 
-            <code class="ruby">    @author    = background_data[:results][0][:user][:username]</code>
+            <code class="ruby">    @image_url = background_data[:results][0][:urls][:raw]</code>
           </li>
         </div>
       
@@ -1034,29 +1034,29 @@
 
             
 
+            <code class="ruby">    @source    = &#39;unsplash.com&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @author    = background_data[:results][0][:user][:username]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    @logo      = &#39;https://unsplash.com/apple-touch-icon.png&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1067,7 +1067,7 @@
 
             
 
-            <code class="ruby">  # def credit</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1078,7 +1078,7 @@
 
             
 
-            <code class="ruby">  #   @credit[:source] = @source</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1089,7 +1089,7 @@
 
             
 
-            <code class="ruby">  #   @credit[:author] = @author</code>
+            <code class="ruby">  # def credit</code>
           </li>
         </div>
       
@@ -1100,7 +1100,7 @@
 
             
 
-            <code class="ruby">  #   @credit[:logo]   = @logo</code>
+            <code class="ruby">  #   @credit[:source] = @source</code>
           </li>
         </div>
       
@@ -1111,7 +1111,7 @@
 
             
 
-            <code class="ruby">  # end</code>
+            <code class="ruby">  #   @credit[:author] = @author</code>
           </li>
         </div>
       
@@ -1122,7 +1122,7 @@
 
             
 
-            <code class="ruby">  #</code>
+            <code class="ruby">  #   @credit[:logo]   = @logo</code>
           </li>
         </div>
       
@@ -1133,7 +1133,7 @@
 
             
 
-            <code class="ruby">  # def image</code>
+            <code class="ruby">  # end</code>
           </li>
         </div>
       
@@ -1144,7 +1144,7 @@
 
             
 
-            <code class="ruby">  #   @image[:location]  = @location</code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
@@ -1155,7 +1155,7 @@
 
             
 
-            <code class="ruby">  #   @image[:image_url] = @image_url</code>
+            <code class="ruby">  # def image</code>
           </li>
         </div>
       
@@ -1166,7 +1166,7 @@
 
             
 
-            <code class="ruby">  #   @image[:credit]    = @credit</code>
+            <code class="ruby">  #   @image[:location]  = @location</code>
           </li>
         </div>
       
@@ -1177,12 +1177,34 @@
 
             
 
-            <code class="ruby">  # end</code>
+            <code class="ruby">  #   @image[:image_url] = @image_url</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">  #   @image[:credit]    = @credit</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">  # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
@@ -2562,7 +2584,7 @@
 
             
 
-            <code class="ruby">  def image_by_current_location(location)</code>
+            <code class="ruby">  def image_by_current_location(location, weather = &#39;sunny&#39;)</code>
           </li>
         </div>
       
@@ -2573,7 +2595,7 @@
 
             
 
-            <code class="ruby">    response = conn.get(&quot;/search/photos?query=#{location} outdoors&amp;page=1&amp;per_page=1&amp;orientation=landscape&amp;filter=high&quot;)</code>
+            <code class="ruby">    response = conn.get(&quot;/search/photos?query=#{location} #{weather}&amp;page=1&amp;per_page=1&amp;orientation=landscape&amp;filter=high&quot;)</code>
           </li>
         </div>
       
