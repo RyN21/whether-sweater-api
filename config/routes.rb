@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       ## find forecast endpoints
       resources :forecast, only: [:index]
       resources :backgrounds, only: [:index]
+      resources :climbing_routes, only: [:index]
     end
   end
 end

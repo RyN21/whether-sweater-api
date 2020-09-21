@@ -218,98 +218,8 @@
           null,
           1,
           1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/spec/requests/api/v1/forcast_request_spec.rb": {
-        "lines": [
           1,
           null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/spec/services/mapquest_service_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/spec/services/open_weather_service_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/spec/services/unsplash_service_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
           null,
           null
         ]
@@ -320,7 +230,7 @@
           null
         ]
       },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/controllers/api/v1/backgrounds_controller.rb": {
+      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/controllers/api/v1/climbing_routes_controller.rb": {
         "lines": [
           1,
           1,
@@ -330,216 +240,21 @@
           null
         ]
       },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/facades/backgrounds_facade.rb": {
+      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/facades/climbing_routes_facade.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/services/unsplash_service.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          2,
-          null,
-          null,
-          1,
-          1,
-          2,
-          2,
           null,
           null,
           null
         ]
       },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/poros/background.rb": {
+      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/serializers/climbing_routes_serializer.rb": {
         "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/serializers/backgrounds_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/controllers/api/v1/forecast_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/facades/forecast_facade.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/services/open_weather_service.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          2,
-          null,
-          2,
-          2,
-          null,
-          2,
-          2,
-          null,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/services/map_quest_service.rb": {
-        "lines": [
-          1,
-          1,
-          4,
-          4,
-          4,
-          null,
-          4,
-          4,
-          4,
-          null,
-          null,
-          1,
-          1,
-          4,
-          4,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/poros/forecast.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/serializers/forecast_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+
         ]
       }
     },
-    "timestamp": 1600658634
+    "timestamp": 1600702705
   }
 }
