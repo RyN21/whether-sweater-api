@@ -235,6 +235,7 @@
           1,
           1,
           1,
+          1,
           0,
           null,
           null
@@ -247,7 +248,7 @@
           1,
           1,
           1,
-          1,
+          38,
           null,
           null,
           null
@@ -297,8 +298,25 @@
           null,
           null
         ]
+      },
+      "/Users/ryn/turing/3module/projects/whether_sweater/whether_sweater_api/app/poros/route.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          38,
+          38,
+          38,
+          38,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1600703270
+    "timestamp": 1600704175
   }
 }
