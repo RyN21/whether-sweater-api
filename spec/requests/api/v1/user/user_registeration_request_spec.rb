@@ -29,7 +29,9 @@ describe "User registeration request" do
     expect(user.email).to eq(user_params[:email])
     expect(user_parse).to eq(body)
   end
+end
 
+describe "Unsuccessful Requests" do
   it "tests for unsuccessful requests: Passwords do not match" do
     headers  = { "CONTENT_TYPE" => "application/json" }
     user_params = {email: "test@email.com",
