@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Climbing routes request" do
-  it "sends climbing routes based on location", :vcr do
+  it "sends climbing routes based on location" do
     headers  = { "CONTENT_TYPE" => "application/json" }
     location = 'erwin,tn'
 

@@ -9,6 +9,10 @@ class MapQuestService
     lat_lon
   end
 
+  def distance_to_destination(location, destination)
+    
+  end
+
   private
   def conn
     Faraday.new(url: 'http://www.mapquestapi.com') do |faraday|

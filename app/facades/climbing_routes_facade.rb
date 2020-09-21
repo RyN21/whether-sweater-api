@@ -13,7 +13,8 @@ class ClimbingRoutesFacade
     Forecast.new(onecall_data)
   end
 
-  def climbing_routes_direction(location)
+  def climbing_routes_direction(location, route)
     search = MapQuestService.new
+    distance_to_route = search.distance_to_destination(location, route)
   end
 end
