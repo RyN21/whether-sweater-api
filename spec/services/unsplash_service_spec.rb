@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Unsplash Service' do
-  it "Background Image API" do
+  it "Background Image API", :vcr do
     location = "Denver,CO"
     result   = UnsplashService.new.image_by_current_location(location)
 

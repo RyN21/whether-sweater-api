@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'MapQuest Service' do
+RSpec.describe 'MapQuest Service', :vcr do
   it "can return latitude and longitude" do
     location  = "Denver, CO"
     result    = {lat: 39.738453,
@@ -9,7 +9,7 @@ RSpec.describe 'MapQuest Service' do
     expect(MapQuestService.new.lat_and_lon(location)).to eq(result)
   end
 
-  it "spacing doesn't matter" do
+  it "spacing doesn't matter", :vcr do
     location  = "Denver,CO"
     result    = {lat: 39.738453,
                  lon: -104.984853}

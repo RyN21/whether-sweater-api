@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Forcast request" do
-  it "sends forcast with attributes" do
+  it "sends forcast with attributes", :vcr do
     headers  = { "CONTENT_TYPE" => "application/json" }
     location = 'Denver, CO'
 
