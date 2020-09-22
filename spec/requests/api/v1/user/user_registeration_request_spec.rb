@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "User registeration request" do
   it "can create a user" do
-    headers  = { "CONTENT_TYPE" => "application/json" }
+    headers     = { "CONTENT_TYPE" => "application/json" }
     user_params = {email: "test@email.com",
                    password: "password",
                    password_confirmation: "password"}
@@ -33,7 +33,7 @@ end
 
 describe "Unsuccessful Requests" do
   it "tests for unsuccessful requests: Passwords do not match" do
-    headers  = { "CONTENT_TYPE" => "application/json" }
+    headers     = { "CONTENT_TYPE" => "application/json" }
     user_params = {email: "test@email.com",
                    password: "password",
                    password_confirmation: "passwordDoesntMatch"}
@@ -46,8 +46,8 @@ describe "Unsuccessful Requests" do
   end
 
   it "tests for unsuccessful requests: Email already taken" do
-    user1 = create(:user, email: "test@email.com")
-    headers  = { "CONTENT_TYPE" => "application/json" }
+    user1       = create(:user, email: "test@email.com")
+    headers     = { "CONTENT_TYPE" => "application/json" }
     user_params = {email: "test@email.com",
                    password: "password",
                    password_confirmation: "password"}
@@ -60,7 +60,7 @@ describe "Unsuccessful Requests" do
   end
 
   it "tests for unsuccessful requests: Missing fields" do
-    headers  = { "CONTENT_TYPE" => "application/json" }
+    headers     = { "CONTENT_TYPE" => "application/json" }
     user_params = {email: "test@email.com",
                    password: "",
                    password_confirmation: "password"}

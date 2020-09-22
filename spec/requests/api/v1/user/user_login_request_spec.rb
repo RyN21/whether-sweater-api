@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe "User Logs in request" do
   it "can log in" do
-    user = create(:user, email: "test21@email.com")
-    headers  = { "CONTENT_TYPE" => "application/json" }
+    user         = create(:user, email: "test21@email.com")
+    headers      = { "CONTENT_TYPE" => "application/json" }
     login_params = {email: user.email,
                     password: user.password}
 
@@ -32,8 +32,8 @@ end
 
 describe "Unsuccessful Requests" do
   it "tests for unsuccessful requests: Incorrect email" do
-    user = create(:user, email: "test21@email.com")
-    headers  = { "CONTENT_TYPE" => "application/json" }
+    user         = create(:user, email: "test21@email.com")
+    headers      = { "CONTENT_TYPE" => "application/json" }
     login_params = {email: "wrongEmail@email.com",
       password: user.password}
 
@@ -45,8 +45,8 @@ describe "Unsuccessful Requests" do
     end
 
     it "tests for unsuccessful requests: Incorrect password" do
-      user = create(:user, email: "test21@email.com")
-      headers  = { "CONTENT_TYPE" => "application/json" }
+      user         = create(:user, email: "test21@email.com")
+      headers      = { "CONTENT_TYPE" => "application/json" }
       login_params = {email: user.email,
         password: "wrongPassword"}
 
