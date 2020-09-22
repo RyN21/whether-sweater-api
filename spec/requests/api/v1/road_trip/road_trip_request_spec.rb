@@ -27,7 +27,7 @@ describe "Road trip request" do
                   "forecast": {
                     "arrival_temp": "",
                     "arrival_weather": ""
-                  },
+                  }
                 }
               }
             }

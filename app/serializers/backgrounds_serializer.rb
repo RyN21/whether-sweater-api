@@ -4,7 +4,7 @@ class BackgroundsSerializer
       "data": {
         "type": "image",
         "id": nil,
-        "image": {
+        "attributes": {
           "location": image.location,
           "image_url": image.image_url,
           "credit": {
