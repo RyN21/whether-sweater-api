@@ -14,16 +14,4 @@ class Background
     @author    = background_data[:results][0][:user][:username]
     @logo      = 'https://unsplash.com/apple-touch-icon.png'
   end
-
-  # def credit
-  #   @credit[:source] = @source
-  #   @credit[:author] = @author
-  #   @credit[:logo]   = @logo
-  # end
-  #
-  # def image
-  #   @image[:location]  = @location
-  #   @image[:image_url] = @image_url
-  #   @image[:credit]    = @credit
-  # end
 end
