@@ -9,6 +9,11 @@ class MapQuestService
     lat_lon
   end
 
+  def directions(from, to)
+    response = conn.get("http://www.mapquestapi.com/directions/v2/route?from=#{from}&to=#{to}&unit=miles")
+    json     = JSON.parse(response.body, symbolize_names: true)
+  end
+
   private
   def conn
     Faraday.new(url: 'http://www.mapquestapi.com') do |faraday|
