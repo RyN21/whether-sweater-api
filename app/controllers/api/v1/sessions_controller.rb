@@ -5,7 +5,7 @@ class Api::V1::SessionsController < ApplicationController
       render json: UserSerializer.new(user)
     elsif user == nil
       render json: "Unsuccessful. User not found. Check if you entered the correct email or Sign up"
-      response.status = 401
+      response.status = 400
     elsif !user.authenticate(login_params[:password])
       render json: "Unsuccessful. Password does not match. Please try again."
       response.status = 401

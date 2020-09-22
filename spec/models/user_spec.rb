@@ -9,4 +9,11 @@ RSpec.describe User, type: :model do
     it { should validate_uniqueness_of(:email) }
     it { should validate_uniqueness_of(:api_key) }
   end
+
+  describe "class methods" do
+    it ".generate_api_key" do
+      api_key = User.generate_api_key
+      expect(api_key.length).to eq(42)
+    end
+  end
 end

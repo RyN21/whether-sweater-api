@@ -6,7 +6,7 @@ class OpenWeatherService
     lat = result[:lat]
     lon = result[:lon]
 
-    response = conn.get("/data/2.5/onecall?lat=#{lat}&lon=#{lon}&exclude=minutely&units=imperial")
+    response = conn.get("/data/2.5/onecall?lat=#{lat}&lon=#{lon}&exclude=minutely,alerts&units=imperial")
     json     = JSON.parse(response.body, symbolize_names: true)
   end
 

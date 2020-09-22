@@ -27,9 +27,5 @@ describe "Forcast request" do
     expect(forecast[:data][:attributes][:daily_8]).to         be_truthy
     expect(forecast[:data][:attributes][:hourly_48].length).to eq(48)
     expect(forecast[:data][:attributes][:daily_8].length).to   eq(8)
-
-    expect(forecast[:data][:attributes][:minutely]).to        be_falsy
-    expect(forecast[:data][:attributes][:pressure]).to        be_falsy
-    expect(forecast[:data][:attributes][:dew_point]).to       be_falsy
   end
 end
