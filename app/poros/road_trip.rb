@@ -1,7 +1,9 @@
 class RoadTrip
   attr_reader :origin,
               :destination,
-              :current_time
+              :hourly_forecast,
+              :current_time,
+              :time_in_sec
 
   def initialize(forecast, directions, origin, destination)
     @origin          = origin
