@@ -3,7 +3,7 @@ class Api::V1::RoadTripController < ApplicationController
     user = User.find_by(api_key: rt_params[:api_key])
     if user
       road_trip = RoadTripFacade.new.road_trip_object(rt_params[:origin], rt_params[:destination])
-      render json: RoadTripSerializer.new(road_trip)
+      render json: RoadTripSerializer.new.handroll_road_trip(road_trip)
     else
       render json: "Unsuccessful. Invalid API key"
       response.status = 401
