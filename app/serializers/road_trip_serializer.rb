@@ -9,7 +9,8 @@ class RoadTripSerializer
           "directions": {
             "origin": road_trip.origin,
             "destination": road_trip.destination,
-            "travel_time": road_trip.travel_time_rounded_up_15
+            "travel_time": road_trip.travel_time_rounded_up_15,
+            "exact_travel_time": road_trip.travel_time
           },
           "forecast": {
             "arrival_temp": road_trip.arrival_temp,

@@ -41,7 +41,7 @@ describe "Unsuccessful Requests" do
     post "/api/v1/users", params: JSON.generate(user_params), headers: headers
 
     expect(response).to_not be_successful
-    expect(response.status).to eq(409)
+    expect(response.status).to eq(400)
     expect(response.body).to eq("Unsuccessful. Passwords do not match. Please try again.")
   end
 
@@ -55,7 +55,7 @@ describe "Unsuccessful Requests" do
     post "/api/v1/users", params: JSON.generate(user_params), headers: headers
 
     expect(response).to_not be_successful
-    expect(response.status).to eq(409)
+    expect(response.status).to eq(400)
     expect(response.body).to eq("Unsuccessful. Email already taken.")
   end
 
@@ -68,7 +68,7 @@ describe "Unsuccessful Requests" do
     post "/api/v1/users", params: JSON.generate(user_params), headers: headers
 
     expect(response).to_not be_successful
-    expect(response.status).to eq(409)
+    expect(response.status).to eq(400)
     expect(response.body).to eq("Unsuccessful. Missing a field. Please try again.")
   end
 end

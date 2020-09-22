@@ -22,11 +22,12 @@ describe "Road trip request" do
                 "directions": {
                   "origin": "Denver,CO",
                   "destination": "Pueblo,CO",
-                  "travel_time": "02:00:00"
+                  "travel_time": "02:00:00",
+                  "exact_travel_time": "01:48:13"
                 },
                 "forecast": {
-                  "arrival_temp": 75.54,
-                  "arrival_weather": "few clouds"
+                  "arrival_temp": 82.63,
+                  "arrival_weather": "clear sky"
                 }
               }
             }
@@ -65,7 +66,7 @@ describe "Unsuccessful road trip requests" do
     post "/api/v1/road_trip", params: JSON.generate(request), headers: headers
 
     expect(response).to_not be_successful
-    expect(response.status).to eq(401)
-    expect(response.body).to eq("Unsuccessful. Invalid API key")
+    expect(response.status).to eq(400)
+    expect(response.body).to eq("Missing fields. Please try again.")
   end
 end

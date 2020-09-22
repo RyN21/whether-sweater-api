@@ -40,7 +40,7 @@ describe "Unsuccessful Requests" do
       post "/api/v1/sessions", params: JSON.generate(login_params), headers: headers
 
       expect(response).to_not be_successful
-      expect(response.status).to eq(401)
+      expect(response.status).to eq(400)
       expect(response.body).to eq("Unsuccessful. User not found. Check if you entered the correct email or Sign up")
     end
 
