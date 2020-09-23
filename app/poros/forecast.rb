@@ -1,5 +1,6 @@
 class Forecast
   attr_reader :id,
+              :dt,
               :current_temp,
               :weather_summary,
               :weather_main,
@@ -16,6 +17,7 @@ class Forecast
 
   def initialize(forecast_data)
     @id              = nil
+    @dt              = forecast_data[:current]
     @current_temp    = forecast_data[:current][:temp]
     @weather_summary = forecast_data[:current][:weather][0][:description]
     @weather_main    = forecast_data[:current][:weather][0][:main]
