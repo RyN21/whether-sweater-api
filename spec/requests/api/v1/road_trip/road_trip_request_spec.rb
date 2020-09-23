@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "Road trip request" do
-  it "can create road trip request", :vcr do
+describe "Road trip request", :vcr do
+  it "can create road trip request" do
     user     = create(:user)
     headers  = { "CONTENT_TYPE" => "application/json" }
     request  = {origin: "Denver,CO",
@@ -23,10 +23,10 @@ describe "Road trip request" do
                   "origin": "Denver,CO",
                   "destination": "Pueblo,CO",
                   "travel_time": "02:00:00",
-                  "exact_travel_time": "01:50:19"
+                  "exact_travel_time": "01:48:14"
                 },
                 "forecast": {
-                  "arrival_temp": 67.73,
+                  "arrival_temp": 66.16,
                   "arrival_weather": "broken clouds"
                 }
               }

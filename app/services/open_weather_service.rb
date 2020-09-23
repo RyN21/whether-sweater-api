@@ -1,7 +1,6 @@
 class OpenWeatherService
   def onecall(location)
-    search_coords = MapQuestService.new
-    result = search_coords.lat_and_lon(location)
+    result = MapQuestService.new.lat_and_lon(location)
 
     lat = result[:lat]
     lon = result[:lon]

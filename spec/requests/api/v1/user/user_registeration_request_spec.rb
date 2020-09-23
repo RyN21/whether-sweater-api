@@ -69,6 +69,6 @@ describe "Unsuccessful Requests" do
 
     expect(response).to_not be_successful
     expect(response.status).to eq(400)
-    expect(response.body).to eq("Unsuccessful. Missing a field. Please try again.")
+    expect(response.body).to eq("Unsuccessful. Missing fields. Please try again.")
   end
 end

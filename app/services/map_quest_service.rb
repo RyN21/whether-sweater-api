@@ -6,6 +6,7 @@ class MapQuestService
 
     lat_lon[:lat] = json[:results][0][:locations][0][:latLng][:lat]
     lat_lon[:lon] = json[:results][0][:locations][0][:latLng][:lng]
+
     lat_lon
   end
 

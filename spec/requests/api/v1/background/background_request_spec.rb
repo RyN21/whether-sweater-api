@@ -11,21 +11,21 @@ describe 'Background request' do
 
     image = JSON.parse(response.body, symbolize_names: true)
 
-    parsed_json = {
-                    data: {
-                      type: "image",
-                      id: nil,
-                      attributes: {
-                        location: "Denver, CO",
-                        image_url: "https://images.unsplash.com/photo-1578635073897-3807ceb9a88d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE2Njk4NX0",
-                        credit: {
-                          source: "unsplash.com", author: "rdehamer", logo: "https://unsplash.com/apple-touch-icon.png"
+    expected_json = {
+                      data: {
+                        type: "image",
+                        id: nil,
+                        attributes: {
+                          location: "Denver, CO",
+                          image_url: "https://images.unsplash.com/photo-1578635073897-3807ceb9a88d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE2Njk4NX0",
+                          credit: {
+                            source: "unsplash.com", author: "rdehamer", logo: "https://unsplash.com/apple-touch-icon.png"
+                          }
                         }
                       }
                     }
-                  }
 
-    expect(image).to eq(parsed_json)
+    expect(image).to eq(expected_json)
     expect(image[:data][:type]).to eq('image')
     expect(image[:data][:id]).to be_nil
     expect(image[:data][:attributes]).to be_truthy
