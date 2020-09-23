@@ -13,20 +13,20 @@ describe "User Logs in request" do
     user_json = JSON.parse(response.body, symbolize_names: true)
 
     expected_json =  {
-                      "data": {
-                        "type": "user",
-                        "id": user.id.to_s,
-                        "attributes": {
-                          "email": user.email,
-                          "api_key": user.api_key
-                        }
-                      }
-                    }
+                       "data": {
+                         "type": "user",
+                         "id": user.id.to_s,
+                         "attributes": {
+                           "email": user.email,
+                           "api_key": user.api_key
+                         }
+                       }
+                     }
 
     expect(response.status).to eq(200)
-    expect(user_json).to eq(body)
+    expect(user_json).to eq(expected_json)
     expect(user.email).to eq(login_params[:email])
-    expect(user_json).to eq(body)
+    expect(user_json).to eq(expected_json)
   end
 end
 
