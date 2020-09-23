@@ -2,6 +2,10 @@
 #
 # describe RoadTrip, type: :poro do
 #   describe "instance methods" do
+#     before :each do
+#       use an existing vcr
+#       vcr.use_cassette
+#     end
 #     it "adf", :vcr do
 #       user     = create(:user)
 #       headers  = { "CONTENT_TYPE" => "application/json" }

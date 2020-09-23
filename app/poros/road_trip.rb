@@ -14,12 +14,12 @@ class RoadTrip
   end
 
   def travel_time
-    @travel_time = Time.at(@time_in_sec).utc.strftime("%H:%M:%S")
+    Time.at(@time_in_sec).utc.strftime("%H:%M:%S")
   end
 
   def travel_time_rounded_up_15
     time = Time.at(@time_in_sec).utc - (@time_in_sec % 15.minutes) + 15.minutes
-    @travel_time = time.strftime("%H:%M:%S")
+    time.strftime("%H:%M:%S")
   end
 
   def minutes_to_arrival

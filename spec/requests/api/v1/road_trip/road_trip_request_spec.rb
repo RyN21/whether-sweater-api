@@ -23,11 +23,11 @@ describe "Road trip request" do
                   "origin": "Denver,CO",
                   "destination": "Pueblo,CO",
                   "travel_time": "02:00:00",
-                  "exact_travel_time": "01:48:13"
+                  "exact_travel_time": "01:50:19"
                 },
                 "forecast": {
-                  "arrival_temp": 82.63,
-                  "arrival_weather": "clear sky"
+                  "arrival_temp": 67.73,
+                  "arrival_weather": "broken clouds"
                 }
               }
             }
