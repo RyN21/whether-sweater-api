@@ -2,8 +2,8 @@ Sweater Weather is a backend Rails API for a hypothetical weather & trip plannin
 
 This project focuses on building and consuming API's.
 
-[https://backend.turing.io/module3/projects/sweater_weather/](Original-Project-Page)
-[https://backend.turing.io/module3/projects/sweater_weather/requirements](Technical-Requirements)
+[Original Project Page](https://backend.turing.io/module3/projects/sweater_weather/)
+[Technical Requirements](https://backend.turing.io/module3/projects/sweater_weather/requirements)
 
 Versions
 Ruby 2.5.3
