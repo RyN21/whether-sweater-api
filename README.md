@@ -24,10 +24,10 @@ All API responses in test suite are mocked using webmock and vcr gems with the e
 Add these to your application.yml file:<br>
 
 [Mapquest API](https://developer.mapquest.com/documentation/geocoding-api/)<br>
-GEOCODING_API_KEY: <api_key><br>
+MAPQUEST_API_KEY: <api_key><br>
 
 [Open Weather API](https://openweathermap.org/api/one-call-api)<br>
-OPEN_WEATHER_API_KEY: <api_key><br>
+OPEN_WEATHER_API_ID: <api_key><br>
 
 [Unsplase API](https://unsplash.com/developers)<br>
 UNSPLASH_ACCESS_KEY: <api_key><br>
