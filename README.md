@@ -5,30 +5,30 @@ This project focuses on building and consuming API's.
 [Original Project Page](https://backend.turing.io/module3/projects/sweater_weather/)<br>
 [Technical Requirements](https://backend.turing.io/module3/projects/sweater_weather/requirements)
 
-Versions
-Ruby 2.5.3
-Rails 6.0.3
-PostgreSQL database
-RSpec for testing
-Setup
-Fork & clone the repo
-Run bundle install
-Run rails db:{create,migrate}
-Run bundle exec figaro install
-Add your API keys to the newly created config/application.yml file. Reference the API Keys section below for compatible environment variable key naming.
-To run local test suite: bundle exec rspec
-All API responses in test suite are mocked using webmock and vcr gems with the exception of the tests under spec/services which test the original external API connections to three different sources.
-Get Your Keys!
-Add these to your application.yml file:
+Versions<br>
+Ruby 2.5.3<br>
+Rails 6.0.3<br>
+PostgreSQL database<br>
+RSpec for testing<br>
+Setup<br>
+Fork & clone the repo<br>
+Run bundle install<br>
+Run rails db:{create,migrate}<br>
+Run bundle exec figaro install<br>
+Add your API keys to the newly created config/application.yml file. Reference the API Keys section below for compatible environment variable key naming.<br>
+To run local test suite: bundle exec rspec<br>
+All API responses in test suite are mocked using webmock and vcr gems with the exception of the tests under spec/services which test the original external API connections to three different sources.<br>
+Get Your Keys!<br>
+Add these to your application.yml file:<br>
 
-Mapquest API
-GEOCODING_API_KEY: <api_key>
+[Mapquest API](https://developer.mapquest.com/documentation/geocoding-api/)<br>
+GEOCODING_API_KEY: <api_key><br>
 
-Open Weather API
-OPEN_WEATHER_API_KEY: <api_key>
+[Open Weather API](https://openweathermap.org/api/one-call-api)<br>
+OPEN_WEATHER_API_KEY: <api_key><br>
 
-Pixabay API
-PIXABAY_API_KEY: <api_key>
+[Unsplase API](https://unsplash.com/developers)<br>
+UNSPLASH_ACCESS_KEY: <api_key><br>
 
 Sweater Weather in Action!
 Make sure to spin up a local server for Sweater Weather before trying to run the requests in Postman.
